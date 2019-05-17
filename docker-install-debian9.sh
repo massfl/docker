@@ -38,7 +38,10 @@ apt install docker-ce docker-ce-cli containerd.io \
 
 
 #send a message to notify that the install if done
-&& echo docker install done... check it out with: docker run hello-world
+&& echo "@
+@
+@
+@@@@@    docker install done... check it out by running: docker run hello-world @@@@"
 
 
 
