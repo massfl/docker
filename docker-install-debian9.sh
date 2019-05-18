@@ -1,7 +1,9 @@
-#############bash script to install docker in debian9 OS###################
+#############bash script to install docker-ce engien and docker-compose in debian9 OS###################
 #
 #
 #!/bin/bash
+
+echo "@@@@@@ Starting DOCKER-CE engine install @@@@@@"
 
 
 # SET UP THE DOCKER REPOSITORY
@@ -37,11 +39,20 @@ add-apt-repository \
 apt install docker-ce docker-ce-cli containerd.io \
 
 
-#send a message to notify that the install if done
+#DOCKER COMPOSE INSTALL
+
+echo "@@@@@@ now moving on to DOCKER-COMPOSE install @@@@@@"
+
+##download the current stable release of Docker Compose
+curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compos
+
+#make the docker compose release file executable
+chmod +x /usr/local/bin/docker-compose
+
+
+#send a message to notify that the install is done
 && echo "@
-@
-@
-@@@@@    docker install done... check it out by running: docker run hello-world @@@@"
-
-
+@                                                                                                                 @
+@                                                                                                                 @
+@@@@@    docker-ce engine & docker-compose install done... check it out by running: docker run hello-world    @@@@@"
 
