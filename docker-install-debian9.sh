@@ -21,7 +21,7 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 echo $(date) "the docker install key fingerprint should be: 
         9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88
         as specified in https://docs.docker.com/install/linux/docker-ce/debian" \
-        > docker-install-key-fingerprint.txt && echo$(apt-key fingerprint 0EBFCD88) >> docker-install-key-fingerprint.txt
+        > docker-install-key-fingerprint.txt && echo $(apt-key fingerprint 0EBFCD88) >> docker-install-key-fingerprint.txt
 
 ## install lsb_release
 apt install lsb
