@@ -44,7 +44,7 @@ apt install docker-ce docker-ce-cli containerd.io \
 echo "@@@@@@ now moving on to DOCKER-COMPOSE install @@@@@@"
 
 ##download the current stable release of Docker Compose
-curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compos
+curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 #make the docker compose release file executable
 chmod +x /usr/local/bin/docker-compose
