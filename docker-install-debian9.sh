@@ -51,7 +51,7 @@ chmod +x /usr/local/bin/docker-compose
 
 
 #send a message to notify that the install is done
-&& echo "@
+echo "@
 @                                                                                                                 @
 @                                                                                                                 @
 @@@@@    docker-ce engine & docker-compose install done... check it out by running: docker run hello-world    @@@@@"
