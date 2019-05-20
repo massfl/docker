@@ -1,0 +1,11 @@
+---
+- hosts: all
+  name: "gitlab-ce container execution"
+   image: gitlab/gitlab-ce
+   volumes:
+      - /home/gitlab/data:/var/opt/gitlab
+      - /home/gitlab/logs:/var/log/gitlab
+      - /home/gitlab/config:/etc/gitlab
+      
+   published_ports:
+      - 8080:80
